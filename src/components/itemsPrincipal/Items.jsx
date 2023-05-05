@@ -6,7 +6,7 @@ const Item = ({item}) => {
         <Link to={"/item/" + item.id} className="text-decoration-none" >
             
                 <div className="card border">
-                    <img src={item.img} className="card-img-top" alt={item.title} />
+                    <img src={item.img} className="card-img-top img" alt={item.title} />
                     <div className="card-body text-center ">
                         <p className="card-text ">{item.title} </p>
                         <p>$ {item.price}</p>

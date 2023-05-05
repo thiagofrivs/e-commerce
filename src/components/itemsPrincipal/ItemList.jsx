@@ -2,7 +2,6 @@ import React from 'react'
 import Item from './Items'
 
 export const ItemList = ({ item }) => {
-    console.log(item)
     return (
         <>
             {

@@ -18,11 +18,11 @@ export const Aside = () => {
                 <h1>Tiendástica.</h1>
             </header>
             <div className='miniContainer'>
-            <Link to={'/'} className='cat'><button className={`cat ${clicked === 'todos' ? 'btn-active' : ''}`} onClick={() => handleClick('todos')}>Todos los productos</button></Link>
+                <Link to={'/'} className='cat'><button className={`cat ${clicked === 'todos' ? 'btn-active' : ''}`} onClick={() => handleClick('todos')}>Todos los productos</button></Link>
                 <Link to={'/category/almohadas'} className='cat '><button className={`cat ${clicked === 'almohadas' ? 'btn-active' : ''}`} onClick={() => handleClick('almohadas')}>Almohadas</button></Link>
                 <Link to={'/category/reposeras'} className='cat'><button className={`cat ${clicked === 'reposeras' ? 'btn-active' : ''}`} onClick={() => handleClick('reposeras')}>Reposeras</button></Link>
                 <Link to={'/category/muebles'} className='cat'><button className={`cat ${clicked === 'muebles' ? 'btn-active' : ''}`} onClick={() => handleClick('muebles')}>Muebles</button></Link>
-                
+
 
             </div>
             <div className="miniContainer">

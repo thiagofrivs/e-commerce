@@ -100,12 +100,78 @@ a:hover {
   margin-left: 0;
 }
 
+.todos-detail{
+  padding: 3rem;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .card {
   width: 20rem;
   max-height: 432px;
 }
 
-img{
+.img{
   max-width: 318px;
   max-height: 318px;
+}
+
+.no-mg{
+  margin: 0;
+  padding: 0;
+}
+
+.escrito{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.desc{
+  padding: 3rem;
+  padding-top: 0;
+  margin-top: 4rem;
+  font-size: 1.2rem;
+}
+
+.img-detail{
+  width: 30rem;
+  border-radius: 30%;
+}
+
+.title{
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title>h3{
+  font-size: 2rem;
+}
+
+.price{
+  color:rgb(80, 78, 78);
+  font-size: 2.2rem;
+}
+
+.detail-todo{
+  display: flex;
+  background-color: var(--clr-white);
+  border-radius: 2rem;
+  margin: 1rem;
+  flex-direction: column;
+}
+
+.counter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem;
+  color: black;
 }
