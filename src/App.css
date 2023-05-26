@@ -1,5 +1,7 @@
 :root{
   --clr-white:rgb(218, 218, 218);
+  --clr-black:rgb(71, 64, 64);
+  --clr-grey:rgb(141, 140, 140);
 }
 
 
@@ -43,7 +45,7 @@ aside {
 
 main{
   padding-top: 1rem;
-  background-color: grey;
+  background-color: var(--clr-grey);
   width: 100%;
 }
 
@@ -55,7 +57,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: grey;
+  background-color: var(--clr-grey);
   cursor: pointer;
   transition: border-color 0.25s;
   border-right: none;
@@ -72,7 +74,7 @@ button:hover {
 
 .btn-active{
   background-color: var(--clr-white);
-  color: grey;
+  color: var(--clr-grey);
 }
 
 .btn-active::before{
@@ -118,7 +120,7 @@ a:hover {
 
 .todos{
   background-color: var(--clr-white);
-  color: black;
+  color: var(--clr-black);
   border-radius: 20px;
   margin: 1rem;
   padding: 2rem;
@@ -154,7 +156,7 @@ a:hover {
 
 .todos-detail{
   padding: 3rem;
-  color: black;
+  color: var(--clr-black);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -195,7 +197,6 @@ a:hover {
 }
 
 .title{
-  height: 8rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -207,8 +208,13 @@ a:hover {
 }
 
 .price{
-  color:rgb(80, 78, 78);
+  color:var(--clr-black);
   font-size: 2.2rem;
+  background-color: beige;
+  border: 1px solid var(--clr-black);
+  border-radius: 2rem;
+  padding: .5rem;
+  margin-top: 5rem;
 }
 
 .detail-todo{
@@ -226,13 +232,13 @@ a:hover {
   align-items: center;
   gap: 1rem;
   padding: 3rem;
-  color: black;
+  color: var(--clr-black);
 }
 
 .container-cart{
   display: flex;
   align-items: center;
-  color: black;
+  color: var(--clr-black);
   border: 1px solid green;
   padding: 1rem;
   border-radius: 2rem;
@@ -267,7 +273,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  color: black;
+  color: var(--clr-black);
   justify-content: center;
   align-items: center;
 }
@@ -279,7 +285,6 @@ a:hover {
 }
 
 .buttonscart{
-  color: red;
   margin-top: 1rem;
   margin-right: 2rem;
   display: flex ;
@@ -289,7 +294,7 @@ a:hover {
 }
 
 .caja{
-  border: 2px dotted black;
+  border: 2px dotted var(--clr-black);
   padding: 1rem;
   width: 30rem;
   display: flex;
@@ -309,7 +314,7 @@ a:hover {
   flex-direction: column;
   width: 100%;
   align-items: center;
-  border: 2px dotted black;
+  border: 2px dotted var(--clr-black);
   border-radius: 2rem;
 }
 
@@ -326,7 +331,7 @@ a:hover {
   justify-content: space-around;
   align-items: center;
   width: 98%;
-  border: 1px grey solid;
+  border: 1px var(--clr-grey) solid;
   border-radius: 2rem;
   margin: 1rem;
 }
