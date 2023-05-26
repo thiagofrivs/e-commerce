@@ -15,18 +15,14 @@ const CartProvider = ({ children }) => {
 
 
     const addProduct = (item) => {
-        const indice = cart.findIndex((p) => p.id === item.id); // Encontrar el índice del producto con id igual al que queremos agregar
+        const indice = cart.findIndex((p) => p.id === item.id); 
         if (indice !== -1) {
-            // Si el producto ya existe, incrementar la cantidad
             const nuevosProductos = [...cart];
-            console.log(nuevosProductos) // Copiar el array original
             nuevosProductos[indice].cantidad = item.cantidad;
-             // Modificar la cantidad del producto existente en la copia del array
-            setCart(nuevosProductos); // Actualizar el estado con la copia del array modificado
-            localStorage.setItem('carrito',JSON.stringify(cart))
+            setCart(nuevosProductos); 
+            localStorage.setItem('carrito',JSON.stringify(nuevosProductos))
         } else {
-            // Si el producto no existe, agregar el producto completo al array
-            setCart([...cart, item]); // Agregar el nuevo producto al array y actualizar el estado
+            setCart([...cart, item]);
             localStorage.setItem('carrito',JSON.stringify(cart))
         }
 
@@ -47,7 +43,17 @@ const CartProvider = ({ children }) => {
 
     const isInCart = (id) => cart.find(product => product.id === id) ? true : false;
 
-    const removeProduct = (id) => setCart(cart.filter(product => product.id !== id));
+    const removeProduct = (id,cant) =>{
+        
+        const carrito= [...cart]
+        const index=carrito.findIndex((producto=>producto.id===id))
+        carrito[index].cantidad=carrito[index].cantidad-cant
+        if(carrito[index].cantidad===0){
+            carrito.splice(index,1)
+        }
+        setCart(carrito)
+        
+    }
 
 
     return (

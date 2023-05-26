@@ -10,8 +10,7 @@
 }
 
 .wrapper {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
+  display: flex;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 }
@@ -25,7 +24,7 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  width: 17rem;
 }
 
 .miniContainer {
@@ -45,11 +44,12 @@ aside {
 main{
   padding-top: 1rem;
   background-color: grey;
+  width: 100%;
 }
 
 button {
   color: rgba(255, 255, 255, 0.87);
-  border-radius: 8px;
+  border-radius: 1rem;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -59,6 +59,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   border-right: none;
+  position: relative;
 }
 button:hover {
   border-color: #646cff;
@@ -74,9 +75,36 @@ button:hover {
   color: grey;
 }
 
+.btn-active::before{
+  content: '';
+  position: absolute;
+  width: .8rem;
+  height: 100%;
+  left: 95%;
+  bottom: 100%;
+  background-color: transparent;
+  border-bottom-right-radius: 2rem;
+  box-shadow: 0 1rem 0 var(--clr-white);
+}
+
+.btn-active::after{
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  left: 93.9%;
+  top: 95%;
+  background-color: transparent;
+  border-top-right-radius: 3rem;
+  box-shadow:10px 0  0 var(--clr-white);
+}
+
 h1 {
-  font-size: 3.2em;
+  font-size:2.5rem;
   line-height: 1.1;
+}
+h2{
+  text-align: center;
 }
 
 a {
@@ -90,14 +118,38 @@ a:hover {
 
 .todos{
   background-color: var(--clr-white);
+  color: black;
   border-radius: 20px;
   margin: 1rem;
-  display: grid;
-  margin: 1rem;
   padding: 2rem;
-  grid-template-columns: 5fr 5fr 5fr ;
   gap: 1rem;
   margin-left: 0;
+  width: 100%;
+}
+
+.center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+}
+
+.todos>h3, .todos>h5{
+  text-align: center;
+}
+
+.titulo{  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.grid{
+  
+  display: grid;
+  grid-template-columns: 5fr 5fr 5fr ;
+  gap: 1rem;
 }
 
 .todos-detail{
@@ -164,6 +216,7 @@ a:hover {
   background-color: var(--clr-white);
   border-radius: 2rem;
   margin: 1rem;
+  margin-left: 0;
   flex-direction: column;
 }
 
@@ -174,4 +227,113 @@ a:hover {
   gap: 1rem;
   padding: 3rem;
   color: black;
+}
+
+.container-cart{
+  display: flex;
+  align-items: center;
+  color: black;
+  border: 1px solid green;
+  padding: 1rem;
+  border-radius: 2rem;
+  justify-content: space-between;
+}
+
+.container-cart>button{
+  height: 3rem;
+}
+
+.container-cart>img{
+  width: 15rem;
+}
+
+.container-cart>h3{
+  font-size: 1.5rem;
+  word-wrap: normal;
+  width: 15rem;
+}
+
+.container-cart>h4{
+  font-size: 1rem;
+}
+
+.container-cart-todos{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.vacio{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  color: black;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.buttonscart{
+  color: red;
+  margin-top: 1rem;
+  margin-right: 2rem;
+  display: flex ;
+  gap: 2rem;
+  align-items: end;
+  justify-content: end;
+}
+
+.caja{
+  border: 2px dotted black;
+  padding: 1rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  gap: 1rem;
+}
+.w-2{
+  display: flex;
+  width: 21rem;
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  border: 2px dotted black;
+  border-radius: 2rem;
+}
+
+.list>h3{
+  margin-top: 5rem;
+}
+
+.list>div>h4{
+  width: 20rem;
+}
+
+.list-child{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 98%;
+  border: 1px grey solid;
+  border-radius: 2rem;
+  margin: 1rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }

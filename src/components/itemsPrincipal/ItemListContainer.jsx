@@ -21,6 +21,7 @@ const ItemListContainer = () => {
 
     const [item, setItem] = useState([])
     const { id } = useParams();
+    console.log(id)
 
     useEffect(() => {
         const getProducts = async () => {
@@ -50,7 +51,7 @@ const ItemListContainer = () => {
 
         <h2>{id?id:'Todos los productos'}</h2>
 
-            <div className="todos">
+            <div className="todos grid">
                 <ItemList item={item} />
 
 

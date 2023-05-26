@@ -11,6 +11,7 @@ export const ItemDetail = ({ item }) => {
   const onAdd = (cantidad) => {
     setGoToCart(true)
     item.cantidad=cantidad+item.cantidad
+    item.stock=item.stock-cantidad
     addProduct(item)
   }
 

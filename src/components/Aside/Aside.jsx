@@ -19,9 +19,9 @@ export const Aside = () => {
             </header>
             <div className='miniContainer'>
                 <Link to={'/'} className='cat'><button className={`cat ${clicked === 'todos' ? 'btn-active' : ''}`} onClick={() => handleClick('todos')}>Todos los productos</button></Link>
-                <Link to={'/category/almohadas'} className='cat '><button className={`cat ${clicked === 'almohadas' ? 'btn-active' : ''}`} onClick={() => handleClick('almohadas')}>Almohadas</button></Link>
-                <Link to={'/category/reposeras'} className='cat'><button className={`cat ${clicked === 'reposeras' ? 'btn-active' : ''}`} onClick={() => handleClick('reposeras')}>Reposeras</button></Link>
-                <Link to={'/category/muebles'} className='cat'><button className={`cat ${clicked === 'muebles' ? 'btn-active' : ''}`} onClick={() => handleClick('muebles')}>Muebles</button></Link>
+                <Link to={'/category/Almohadas'} className='cat '><button className={`cat ${clicked === 'almohadas' ? 'btn-active' : ''}`} onClick={() => handleClick('almohadas')}>Almohadas</button></Link>
+                <Link to={'/category/Reposeras'} className='cat'><button className={`cat ${clicked === 'reposeras' ? 'btn-active' : ''}`} onClick={() => handleClick('reposeras')}>Reposeras</button></Link>
+                <Link to={'/category/Muebles'} className='cat'><button className={`cat ${clicked === 'muebles' ? 'btn-active' : ''}`} onClick={() => handleClick('muebles')}>Muebles</button></Link>
 
 
             </div>
